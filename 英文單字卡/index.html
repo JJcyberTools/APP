@@ -33,7 +33,7 @@ async function loadRemote(){const {url,branch}=endpoint();V.token=$("token").val
 const parsed=JSON.parse(b64decode(data.content));if(!Array.isArray(parsed))throw Error("JSON 最外層必須是陣列");V.words=parsed.map(normalize);V.sha=data.sha;V.mode="github";V.dirty=false;V.queue=[];note("已連接 GitHub，載入 "+V.words.length+" 個單字。");render()}
 async function saveRemote(){if(V.mode!=="github")throw Error("請先按「從 GitHub 載入」連接，或使用本機模式");const {url,branch}=endpoint();const payload={message:"Update vocabulary cards and review ratings",content:b64encode(JSON.stringify(V.words,null,2)+"\n"),branch};if(V.sha)payload.sha=V.sha;const response=await request(url,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});V.sha=response.content?.sha||null;V.dirty=false;note("成功同步 "+V.words.length+" 個單字到 GitHub。");}
 async function sync(){try{await saveRemote();render()}catch(e){note("同步失敗："+e.message+"。請先下載 JSON 備份，勿直接重新載入；若是版本衝突，須先合併變更。")}}
-function persist(){V.dirty=true;if(V.mode==="local"){localSave();note("已儲存到此瀏覽器（尚未跨裝置同步）")}else{note("有未同步修改；請按「同步變更到 GitHub」完成跨裝置同步。")};render()}
+function persist(){V.dirty=true;if(V.mode==="public"){V.mode="local";localSave();note("已儲存變更到此瀏覽器，尚未寫入公開 JSON。若要跨裝置同步，請先下載備份，再透過 GitHub 授權載入並合併資料。")}else if(V.mode==="local"){localSave();note("已儲存到此瀏覽器（尚未跨裝置同步）")}else{note("有未同步修改；請按「同步變更到 GitHub」完成跨裝置同步。")};render()}
 function show(tab){for(const s of ["add","review","all"]){$(s+"View").classList.toggle("hidden",s!==tab);$("tab"+s[0].toUpperCase()+s.slice(1)).classList.toggle("secondary",s!==tab)}if(tab==="all")renderList()}
 function renderList(){const term=$("search").value.toLowerCase();$("total").textContent="共有 "+V.words.length+" 個單字";$("list").replaceChildren();for(const w of V.words.filter(x=>(x.word+" "+x.meaning).toLowerCase().includes(term))){const li=document.createElement("li"),a=document.createElement("span"),b=document.createElement("span");a.textContent=w.word+" — "+w.meaning;b.textContent="熟悉度 "+w.rating+" / 4";b.className="small muted";li.append(a,b);$("list").append(li)}}
 function weightedPick(k){const pool=V.words.map((w,i)=>({i,key:Math.pow(Math.random(),1/([0,1,2,4,7][w.rating]||7))}));pool.sort((a,b)=>b.key-a.key);return pool.slice(0,k).map(x=>x.i)}
@@ -52,7 +52,18 @@ $("load").onclick=async()=>{if(V.dirty&&!confirm("目前有未同步修改，遠
 $("save").onclick=sync;$("local").onclick=()=>{if(V.dirty&&!confirm("是否轉成本機模式？請先備份未同步資料。"))return;V.mode="local";V.token="";$("token").value="";localSave();note("使用本機模式，資料只在此瀏覽器。");render()};
 $("export").onclick=()=>{const blob=new Blob([JSON.stringify(V.words,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="vocabulary-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500)};
 $("import").onchange=async e=>{try{const file=e.target.files[0];if(!file)return;const data=JSON.parse(await file.text());if(!Array.isArray(data))throw Error("檔案不是 JSON 陣列");if(!confirm("匯入會覆蓋目前的單字清單，繼續？"))return;V.words=data.map(normalize);V.queue=[];persist()}catch(err){note("匯入失敗："+err.message)}finally{e.target.value=""}};
-try{V.words=(JSON.parse(localStorage.getItem(KEY)||"[]")).map(normalize);note("目前為本機模式，已載入 "+V.words.length+" 個單字。跨裝置同步請開啟「同步設定」。")}catch(e){note("本機資料讀取失敗："+e.message)}
-render();
+async function initialLoad(){
+ let saved=[];try{saved=(JSON.parse(localStorage.getItem(KEY)||"[]")).map(normalize)}catch(e){note("本機資料無法讀取："+e.message)}
+ if(saved.length){V.words=saved;V.mode="local";note("已載入此瀏覽器既有的 "+saved.length+" 個單字，以免覆蓋尚未同步的資料。若要載入 GitHub 最新資料，請先匯出備份後到同步設定按「從 GitHub 載入」。");render();return}
+ try{
+  const response=await fetch("./vocabulary.json?refresh="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  const data=await response.json();if(!Array.isArray(data))throw Error("資料格式錯誤");
+  V.words=data.map(normalize);V.mode="public";V.dirty=false;
+  note("已自動從公開 JSON 載入 "+V.words.length+" 個單字。閱讀與複習不需 Token；要寫回 GitHub，請展開同步設定並授權。");
+ }catch(e){V.words=[];V.mode="local";note("自動讀取 GitHub JSON 失敗："+e.message+"。目前可以先用本機模式，或稍後重新整理。")}
+ render();
+}
+initialLoad();
 })();
 </script></body></html>
