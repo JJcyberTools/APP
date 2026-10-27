@@ -43,7 +43,7 @@ function render(){renderList();renderCard();checkDuplicate()}
 function rate(n){const w=current();if(!w)return;w.rating=n;w.reviewCount++;w.lastReviewed=new Date().toISOString();persist();renderCard()}
 function tts(text){if(!("speechSynthesis" in window)){note("這個瀏覽器不支援語音朗讀");return}speechSynthesis.cancel();speak=new SpeechSynthesisUtterance(text);speak.lang="en-US";speak.rate=.88;speechSynthesis.speak(speak)}
 $("tabAdd").onclick=()=>show("add");$("tabReview").onclick=()=>show("review");$("tabAll").onclick=()=>show("all");$("search").oninput=renderList;
-function wordKey(word){return String(word||"").normalize("NFKC").trim().replace(/\\s+/g," ").toLocaleLowerCase("en")}
+function wordKey(word){return String(word||"").normalize("NFKC").trim().replace(/\s+/g," ").toLocaleLowerCase("en")}
 function findDuplicate(word){return V.words.find(w=>wordKey(w.word)===wordKey(word))}
 function checkDuplicate(){
  const word=$("word").value,duplicate=wordKey(word)?findDuplicate(word):null;
