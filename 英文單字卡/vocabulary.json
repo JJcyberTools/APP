@@ -6,9 +6,9 @@
     "meaning": "推出、發表",
     "sentence": "The company will launch a new product next month.",
     "translation": "公司下個月將推出一項新產品。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 2,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:30:59.043Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -18,9 +18,9 @@
     "meaning": "擴大、拓展",
     "sentence": "We plan to expand our business overseas.",
     "translation": "我們計畫拓展海外業務。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 3,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:06:23.201Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -30,9 +30,9 @@
     "meaning": "減少、降低",
     "sentence": "The new system will reduce operating costs.",
     "translation": "新系統將降低營運成本。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:45:00.338Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -66,9 +66,9 @@
     "meaning": "費用、支出",
     "sentence": "Please keep receipts for all travel expenses.",
     "translation": "請保留所有差旅費用的收據。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 2,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:24:24.982Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -78,9 +78,9 @@
     "meaning": "需求",
     "sentence": "Demand for online services continues to grow.",
     "translation": "線上服務的需求持續成長。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 3,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:50:57.381Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -126,9 +126,9 @@
     "meaning": "提交",
     "sentence": "Please submit your report by Friday.",
     "translation": "請在星期五前提交報告。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:07:18.523Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -138,9 +138,9 @@
     "meaning": "核准",
     "sentence": "The manager must approve the request.",
     "translation": "經理必須核准這項申請。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 3,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:30:36.156Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -150,9 +150,9 @@
     "meaning": "要求",
     "sentence": "This position requires excellent communication skills.",
     "translation": "這個職位要求優秀的溝通能力。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:44:31.504Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -162,9 +162,9 @@
     "meaning": "確認",
     "sentence": "Please confirm your reservation by email.",
     "translation": "請透過電子郵件確認你的預訂。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:15:02.082Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -174,9 +174,9 @@
     "meaning": "安排",
     "sentence": "We will arrange a meeting for next week.",
     "translation": "我們將安排下週的會議。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 3,
+    "reviewCount": 2,
+    "lastReviewed": "2026-10-27T07:15:16.927Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -210,9 +210,9 @@
     "meaning": "維持、保養",
     "sentence": "Regular inspections help maintain the equipment.",
     "translation": "定期檢查有助於保養設備。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 3,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:07:22.723Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -222,9 +222,9 @@
     "meaning": "主管",
     "sentence": "Please ask your supervisor for approval.",
     "translation": "請向你的主管申請核准。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 2,
+    "reviewCount": 2,
+    "lastReviewed": "2026-10-27T07:30:25.832Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -234,9 +234,9 @@
     "meaning": "部門",
     "sentence": "She works in the marketing department.",
     "translation": "她在行銷部門工作。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:07:16.599Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -246,9 +246,9 @@
     "meaning": "議程",
     "sentence": "The agenda will be emailed before the meeting.",
     "translation": "議程會在會議前透過電子郵件寄出。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 2,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:31:32.295Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -258,9 +258,9 @@
     "meaning": "時程、安排",
     "sentence": "We need to adjust the project schedule.",
     "translation": "我們需要調整專案時程。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:26:31.764Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -270,9 +270,9 @@
     "meaning": "截止期限",
     "sentence": "The deadline for applications is Friday.",
     "translation": "申請截止日期是星期五。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:40:01.099Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -282,9 +282,9 @@
     "meaning": "提案",
     "sentence": "The committee reviewed our proposal.",
     "translation": "委員會審查了我們的提案。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 1,
+    "reviewCount": 3,
+    "lastReviewed": "2026-10-27T07:07:12.472Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -330,9 +330,9 @@
     "meaning": "完成、達成",
     "sentence": "We can accomplish our goals through teamwork.",
     "translation": "透過團隊合作，我們可以達成目標。",
-    "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "rating": 2,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T07:06:11.584Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -379,8 +379,8 @@
     "sentence": "All staff must follow safety regulations.",
     "translation": "所有員工都必須遵守安全規定。",
     "rating": 4,
-    "reviewCount": 0,
-    "lastReviewed": null,
+    "reviewCount": 3,
+    "lastReviewed": "2026-10-27T07:26:36.487Z",
     "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
@@ -478,5 +478,101 @@
     "reviewCount": 0,
     "lastReviewed": null,
     "createdAt": "2026-10-22T00:00:00+08:00"
+  },
+  {
+    "id": "27976c73-267c-458d-ab40-595dd498302b",
+    "word": "appointment",
+    "partOfSpeech": "n.",
+    "meaning": "預約",
+    "sentence": "She made an appointment with my receptionist",
+    "translation": "她和我的接待員預約了。",
+    "rating": 2,
+    "reviewCount": 1,
+    "lastReviewed": "2026-10-27T06:49:10.803Z",
+    "createdAt": "2026-10-27T06:22:10.000Z"
+  },
+  {
+    "id": "f54d2ce1-c2e4-4f96-b9b3-08d8cba9eb98",
+    "word": "increase",
+    "partOfSpeech": "v.",
+    "meaning": "增加",
+    "sentence": "the company will increase empolye in next week.",
+    "translation": "公司將在下周增加員工",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T06:37:02.182Z"
+  },
+  {
+    "id": "cd01cbc2-0132-48aa-a7c5-3b742f415838",
+    "word": "position",
+    "partOfSpeech": "n.",
+    "meaning": "位置、地位、職務",
+    "sentence": "The distress call had given the ship's position",
+    "translation": "遇險信號透露了船隻的位置。",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T06:42:09.057Z"
+  },
+  {
+    "id": "fa3f3144-e049-47bc-9f07-ddd2e9cbbb3b",
+    "word": "renovation",
+    "partOfSpeech": "n.",
+    "meaning": "翻新、裝修",
+    "sentence": "This house is renovation by KU.",
+    "translation": "這棟房子是顧翻新的.",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T07:04:47.456Z"
+  },
+  {
+    "id": "a45ad4fe-636a-4a43-a440-76e693745cda",
+    "word": "Regular",
+    "partOfSpeech": "adj.",
+    "meaning": "常規的",
+    "sentence": "regular exercise is good for health",
+    "translation": "規律運動有益身體健康",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T07:09:40.713Z"
+  },
+  {
+    "id": "3e56ec66-c2ac-477d-8acd-c52a5bf2c125",
+    "word": "inspection",
+    "partOfSpeech": "n.",
+    "meaning": "檢查",
+    "sentence": "the exam paper inspection is very demanding",
+    "translation": "閱卷要求非常嚴格",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T07:12:28.167Z"
+  },
+  {
+    "id": "85673886-51b3-407b-b955-1b7205dfe062",
+    "word": "salary",
+    "partOfSpeech": "n.",
+    "meaning": "薪水",
+    "sentence": "the company salaries will be adjusted by three percnet",
+    "translation": "公司的薪水將會調整3%",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T07:22:07.146Z"
+  },
+  {
+    "id": "d3f72f32-ef9a-4f57-b306-500052ae99d2",
+    "word": "benefits",
+    "partOfSpeech": "n.",
+    "meaning": "福利、好處",
+    "sentence": "What benefit would I get from helping you?",
+    "translation": "對我有什麼好處",
+    "rating": 4,
+    "reviewCount": 0,
+    "lastReviewed": null,
+    "createdAt": "2026-10-27T07:23:59.456Z"
   }
 ]
