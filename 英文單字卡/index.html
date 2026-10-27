@@ -4,7 +4,7 @@
 :root{font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;color:#1c2c3c;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}header{background:#102e4a;color:#fff;padding:15px 20px}header a{color:#b8e4f8;text-decoration:none}.wrap{max-width:850px;margin:auto;padding:20px 14px 60px}h1{margin:12px 0 4px}.muted{color:#65768a}.panel{background:white;border:1px solid #dce5ee;border-radius:18px;padding:22px;margin-top:16px;box-shadow:0 3px 12px #122b4510}.tabs,.actions,.rating,.nav{display:flex;gap:9px;flex-wrap:wrap}.tabs button{flex:1}button,input,textarea{font:inherit}button{background:#146caa;border:1px solid #146caa;border-radius:10px;color:white;padding:10px 14px;cursor:pointer}button.secondary{background:white;color:#165579;border-color:#b9cbdc}button:disabled{opacity:.45;cursor:default}input,textarea{width:100%;background:white;padding:11px;border:1px solid #bacad8;border-radius:9px}label{display:block;font-weight:600;margin:12px 0 5px}details summary{cursor:pointer;font-weight:650}.cards{text-align:center;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.word{font-size:clamp(30px,7vw,45px);font-weight:750;overflow-wrap:anywhere}.meaning{font-size:21px}.sentence{font-size:18px;line-height:1.6}.translation{color:#67778b}.rating button{flex:1;min-width:110px;background:white;color:#23526b;border-color:#c6d7e5}.rating button[data-score="4"]{border-color:#da9a9a}.rating button.active{background:#146caa;color:white}.nav{justify-content:space-between}.hidden{display:none!important}.status{padding:10px 14px;border-radius:9px;background:#eaf2f8;white-space:pre-wrap}.list{padding:0;list-style:none}.list li{padding:10px;border-bottom:1px solid #ebf0f5;display:flex;justify-content:space-between;gap:12px;align-items:center}.small{font-size:13px}.danger{color:#b04545}code{word-break:break-word}@media(max-width:520px){.panel{padding:15px}.rating button{min-width:calc(50% - 5px)}}
 </style></head><body><header><a href="../">← APP 首頁</a>　／　英文單字卡</header><main class="wrap">
 <h1>📚 英文單字卡</h1><p class="muted">自己造句、語音朗讀、評估熟悉度，優先複習不熟的單字。</p>
-<div class="tabs"><button id="tabAdd" type="button">＋ 新增單字</button><button id="tabReview" type="button" class="secondary">↻ 開始複習</button><button id="tabAll" type="button" class="secondary">全部單字</button></div>
+<div class="tabs"><button id="tabStudy" type="button">📖 學習單字</button><button id="tabReview" type="button" class="secondary">↻ 複習測驗</button><button id="tabAdd" type="button" class="secondary">＋ 新增單字</button><button id="tabAll" type="button" class="secondary">全部單字</button></div>
 <div id="notice" class="status panel" role="status">先到「同步設定」連接 GitHub，或先用本機暫存模式。</div>
 <details class="panel" id="config"><summary>⚙ 同步設定（GitHub JSON）</summary>
 <p class="muted small">GitHub Pages 不能直接修改檔案。本頁透過 GitHub Contents API 更新 JSON。Token 只保存在本頁執行期間的記憶體，不寫進 GitHub 或瀏覽器永久儲存。</p>
@@ -15,6 +15,11 @@
 <p class="muted small">建議另外建立 Private Repository 存資料，避免單字及評分透過公開 Pages 暴露。不要使用有其他 Repository 權限的 Token；每個裝置需自行輸入。</p>
 <div class="actions"><button id="load" type="button">從 GitHub 載入</button><button id="save" type="button" class="secondary">同步變更到 GitHub</button><button id="local" type="button" class="secondary">改用本機模式</button></div></details>
 <section class="panel" id="addView"><h2>新增單字</h2><form id="addForm"><label for="word">英文單字 *</label><input id="word" required maxlength="150" placeholder="expand" autocomplete="off" aria-describedby="duplicateHint"><div id="duplicateHint" class="small muted" role="status" aria-live="polite">輸入單字後，會自動檢查是否已收錄。</div><label for="partOfSpeech">詞性 *</label><select id="partOfSpeech" required style="width:100%;padding:11px;border:1px solid #bacad8;border-radius:9px;background:white;font:inherit"><option value="">請選擇詞性</option><option value="n.">n. 名詞</option><option value="v.">v. 動詞</option><option value="adj.">adj. 形容詞</option><option value="adv.">adv. 副詞</option><option value="n./v.">n./v. 名詞／動詞</option><option value="prep.">prep. 介系詞</option><option value="conj.">conj. 連接詞</option><option value="phr.">phr. 片語</option><option value="other">其他</option></select><label for="meaning">中文意思 *</label><input id="meaning" required maxlength="350" placeholder="擴大、拓展"><label for="sentence">自己寫的英文例句 *</label><textarea id="sentence" required rows="3" maxlength="1200" placeholder="The company plans to expand."></textarea><label for="translation">例句中文翻譯 *</label><textarea id="translation" required rows="2" maxlength="1200" placeholder="公司計畫擴大規模。"></textarea><p class="muted small">新單字預設熟悉度 4（不熟），後續複習可更新。</p><button type="submit">儲存單字</button></form></section>
+<section class="panel" id="studyView"><h2>📖 學習單字</h2><p class="muted small">先按新增順序記熟單字；預設顯示最新加入的 40 個。學習模式不隨機抽題，也不會更改複習評分。</p>
+<div class="actions"><label style="flex:1;margin:0">學習範圍 <select id="studyScope" style="display:block;width:100%;padding:10px;border:1px solid #bacad8;border-radius:9px;font:inherit"><option value="40">最新 40 個單字</option><option value="all">所有單字（依新增順序）</option><option value="unseen">尚未複習過的單字</option></select></label><button id="studyStart" type="button">開始學習</button></div>
+<div id="studyCardArea" class="hidden"><div class="cards"><div id="studyWord" class="word"></div><div id="studyPos" class="muted small"></div><div id="studyMeaning" class="meaning"></div><div class="actions"><button id="studySpeakWord" class="secondary" type="button">🔊 朗讀單字</button><button id="studySpeakSentence" class="secondary" type="button">🔊 朗讀例句</button></div><div id="studySentence" class="sentence"></div><div id="studyTranslation" class="translation"></div></div><div class="nav"><button id="studyPrev" class="secondary" type="button">← 上一張</button><span id="studyProgress" class="muted"></span><button id="studyNext" type="button">下一張 →</button></div></div>
+<p id="studyDone" class="muted">按「開始學習」即可依序瀏覽。</p>
+</section>
 <section class="panel hidden" id="reviewView"><div class="actions" style="justify-content:space-between;align-items:center"><h2 style="margin:0">每日複習</h2><span id="progress" class="muted"></span></div><div class="actions"><label style="margin:0;flex:1">本次張數 <input id="count" type="number" min="1" max="1000" value="40"></label><button id="start" type="button">抽取並打亂順序</button></div><p class="muted small">加權不放回抽樣，單次每個單字最多出現一次；評分越不熟，未來被抽到的機率越高。</p><div id="cardArea" class="hidden"><div class="cards"><div id="wordText" class="word"></div><div id="partOfSpeechText" class="muted small"></div><div id="meaningText" class="meaning"></div><div class="actions"><button id="speakWord" class="secondary" type="button">🔊 朗讀單字</button><button id="speakSentence" class="secondary" type="button">🔊 朗讀例句</button></div><div id="sentenceText" class="sentence"></div><div id="translationText" class="translation"></div></div><p style="text-align:center">這個單字你有多熟？（每次重新評分）</p><div class="rating" id="ratings"><button data-score="1" type="button">1 非常熟</button><button data-score="2" type="button">2 熟悉</button><button data-score="3" type="button">3 不太熟</button><button data-score="4" type="button">4 不熟悉</button></div><div class="nav" style="margin-top:18px"><button id="prev" class="secondary" type="button">← 上一張</button><button id="next" type="button">下一張 →</button></div></div><p id="complete" class="hidden"></p></section>
 <section class="panel hidden" id="allView"><h2>所有單字</h2><input id="search" placeholder="搜尋英文或中文"><p id="total" class="muted"></p><ul class="list" id="list"></ul><p class="muted small">評分與複習次數存在 JSON 資料欄位，不另外顯示成公開表格；目前分數僅在單字清單中供個人確認。</p></section>
 <section class="panel"><h2>備份與匯入</h2><p class="muted small">JSON 可下載備份及匯入。離線使用或同步失敗時，請先下載備份，避免遺失新資料。</p><div class="actions"><button id="export" class="secondary">下載 JSON 備份</button><label style="margin:0"><input id="import" style="max-width:220px" type="file" accept="application/json,.json" aria-label="匯入 JSON 備份"></label></div></section>
@@ -23,14 +28,14 @@
 (()=>{
 "use strict";
 const $=id=>document.getElementById(id);const V={words:[],sha:null,mode:"local",dirty:false,queue:[],index:0,token:"",base:null};
-const KEY="vocabulary-local-v1";let speak=null;
+const KEY="vocabulary-local-v1";let speak=null;let studyQueue=[],studyIndex=0;
 function note(msg){$("notice").textContent=msg}function safe(x){return String(x??"")}function localSave(){localStorage.setItem(KEY,JSON.stringify(V.words))}
 function normalize(x){if(!x||typeof x!=="object")throw Error("JSON 單字格式錯誤");return {id:safe(x.id||crypto.randomUUID()),word:safe(x.word),partOfSpeech:safe(x.partOfSpeech),meaning:safe(x.meaning),sentence:safe(x.sentence),translation:safe(x.translation),rating:Math.max(1,Math.min(4,Number(x.rating)||4)),reviewCount:Math.max(0,Number(x.reviewCount)||0),lastReviewed:x.lastReviewed||null,createdAt:x.createdAt||new Date().toISOString()}}
 function b64decode(x){const bytes=Uint8Array.from(atob(x.replace(/\\n/g,"")),c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}function b64encode(x){return btoa(Array.from(new TextEncoder().encode(x),b=>String.fromCharCode(b)).join(""))}
 function endpoint(){const r=$("repo").value.trim(),p=$("path").value.trim(),branch=$("branch").value.trim();if(!/^[\w.-]+\/[\w.-]+$/.test(r)||!p||!branch)throw Error("請填正確的 Repository、分支與 JSON 路徑");return {url:"https://api.github.com/repos/"+r.split("/").map(encodeURIComponent).join("/")+"/contents/"+p.split("/").map(encodeURIComponent).join("/"),branch}}
 async function request(url,opt={}){if(!V.token)throw Error("請先輸入 GitHub Token");const r=await fetch(url,{...opt,headers:{"Accept":"application/vnd.github+json","Authorization":"Bearer "+V.token,"X-GitHub-Api-Version":"2022-11-28",...(opt.headers||{})}});const body=await r.json().catch(()=>({}));if(!r.ok){const e=new Error(body.message||"HTTP "+r.status);e.status=r.status;throw e}return body}
 async function loadRemote(){const {url,branch}=endpoint();V.token=$("token").value.trim();if(!V.token)throw Error("請輸入 Token");let data;try{data=await request(url+"?ref="+encodeURIComponent(branch));}catch(e){if(e.status===404){V.words=[];V.sha=null;V.mode="github";V.dirty=true;note("GitHub 尚無單字 JSON；按「同步變更」建立空白資料檔。");render();return}throw e}
-const parsed=JSON.parse(b64decode(data.content));if(!Array.isArray(parsed))throw Error("JSON 最外層必須是陣列");V.words=parsed.map(normalize);V.base=JSON.parse(JSON.stringify(V.words));V.sha=data.sha;V.mode="github";V.dirty=false;V.queue=[];note("已連接 GitHub，載入 "+V.words.length+" 個單字。");render()}
+const parsed=JSON.parse(b64decode(data.content));if(!Array.isArray(parsed))throw Error("JSON 最外層必須是陣列");V.words=parsed.map(normalize);studyQueue=[];V.base=JSON.parse(JSON.stringify(V.words));V.sha=data.sha;V.mode="github";V.dirty=false;V.queue=[];note("已連接 GitHub，載入 "+V.words.length+" 個單字。");render()}
 function matchKey(w){return String(w.word||"").normalize("NFKC").trim().toLocaleLowerCase("en")}
 const tracked=["word","partOfSpeech","meaning","sentence","translation","rating","reviewCount","lastReviewed","createdAt"];
 function same(a,b){return JSON.stringify(a)===JSON.stringify(b)}
@@ -79,15 +84,39 @@ async function sync(){
  catch(e){note("同步未完成："+e.message+"。資料仍保留在目前頁面，請先下載 JSON 備份。若其他裝置同時寫入，請稍後重試。")}
 }
 function persist(){V.dirty=true;localSave();if(V.mode==="public"){V.mode="local";localSave();note("已儲存變更到此瀏覽器，尚未寫入公開 JSON。若要跨裝置同步，請先下載備份，再透過 GitHub 授權載入並合併資料。")}else if(V.mode==="local"){localSave();note("已儲存到此瀏覽器（尚未跨裝置同步）")}else{note("有未同步修改；請按「同步變更到 GitHub」完成跨裝置同步。")};render()}
-function show(tab){for(const s of ["add","review","all"]){$(s+"View").classList.toggle("hidden",s!==tab);$("tab"+s[0].toUpperCase()+s.slice(1)).classList.toggle("secondary",s!==tab)}if(tab==="all")renderList()}
+function show(tab){for(const s of ["study","review","add","all"]){$(s+"View").classList.toggle("hidden",s!==tab);$("tab"+s[0].toUpperCase()+s.slice(1)).classList.toggle("secondary",s!==tab)}if(tab==="all")renderList()}
 function renderList(){const term=$("search").value.toLowerCase();$("total").textContent="共有 "+V.words.length+" 個單字";$("list").replaceChildren();for(const w of V.words.filter(x=>(x.word+" "+x.meaning).toLowerCase().includes(term))){const li=document.createElement("li"),a=document.createElement("span"),b=document.createElement("span");a.textContent=w.word+" ("+(w.partOfSpeech||"未填詞性")+") — "+w.meaning;b.textContent="熟悉度 "+w.rating+" / 4";b.className="small muted";li.append(a,b);$("list").append(li)}}
 function weightedPick(k){const pool=V.words.map((w,i)=>({i,key:Math.pow(Math.random(),1/([0,1,2,4,7][w.rating]||7))}));pool.sort((a,b)=>b.key-a.key);return pool.slice(0,k).map(x=>x.i)}
 function current(){return V.words[V.queue[V.index]]}
 function renderCard(){const w=current();$("cardArea").classList.toggle("hidden",!w);$("complete").classList.toggle("hidden",Boolean(w));$("progress").textContent=V.queue.length?(V.index+1)+" / "+V.queue.length:"尚未開始";if(!w){if(V.queue.length)$("complete").textContent="完成本次複習！記得同步評分到 GitHub。";return}for(const [id,key] of [["wordText","word"],["partOfSpeechText","partOfSpeech"],["meaningText","meaning"],["sentenceText","sentence"],["translationText","translation"]])$(id).textContent=w[key];for(const b of $("ratings").querySelectorAll("button"))b.classList.toggle("active",Number(b.dataset.score)===w.rating);$("prev").disabled=V.index===0;$("next").textContent=V.index===V.queue.length-1?"完成複習 ✓":"下一張 →"}
-function render(){renderList();renderCard();checkDuplicate()}
+function startStudy(){
+ const scope=$("studyScope").value;
+ const all=V.words.map((w,i)=>({w,i}));let chosen;
+ if(scope==="all")chosen=all;
+ else if(scope==="unseen")chosen=all.filter(x=>x.w.reviewCount===0);
+ else chosen=all.slice().sort((a,b)=>(Date.parse(b.w.createdAt)||0)-(Date.parse(a.w.createdAt)||0)||b.i-a.i).slice(0,40).sort((a,b)=>a.i-b.i);
+ studyQueue=chosen.map(x=>x.w.id);studyIndex=0;renderStudy();
+}
+function studyCurrent(){return V.words.find(w=>w.id===studyQueue[studyIndex])}
+function renderStudy(){
+ const w=studyCurrent();$("studyCardArea").classList.toggle("hidden",!w);
+ $("studyDone").classList.toggle("hidden",!!w);
+ if(!w){$("studyDone").textContent=studyQueue.length?"已看完這批單字！可以再學習一次，或切換到複習測驗。":"按「開始學習」即可依序瀏覽。";return}
+ for(const [id,key] of [["studyWord","word"],["studyPos","partOfSpeech"],["studyMeaning","meaning"],["studySentence","sentence"],["studyTranslation","translation"]])$(id).textContent=w[key]||"";
+ $("studyProgress").textContent=(studyIndex+1)+" / "+studyQueue.length;
+ $("studyPrev").disabled=studyIndex===0;
+ $("studyNext").textContent=studyIndex===studyQueue.length-1?"完成學習 ✓":"下一張 →";
+}
+function render(){renderList();renderCard();renderStudy();checkDuplicate()}
 function rate(n){const w=current();if(!w)return;w.rating=n;w.reviewCount++;w.lastReviewed=new Date().toISOString();persist();renderCard()}
 function tts(text){if(!("speechSynthesis" in window)){note("這個瀏覽器不支援語音朗讀");return}speechSynthesis.cancel();speak=new SpeechSynthesisUtterance(text);speak.lang="en-US";speak.rate=.88;speechSynthesis.speak(speak)}
-$("tabAdd").onclick=()=>show("add");$("tabReview").onclick=()=>show("review");$("tabAll").onclick=()=>show("all");$("search").oninput=renderList;
+$("tabStudy").onclick=()=>show("study");$("tabAdd").onclick=()=>show("add");$("tabReview").onclick=()=>show("review");$("tabAll").onclick=()=>show("all");
+$("studyStart").onclick=startStudy;
+$("studyScope").onchange=startStudy;
+$("studyPrev").onclick=()=>{if(studyIndex>0)studyIndex--;renderStudy()};
+$("studyNext").onclick=()=>{if(studyIndex<studyQueue.length-1)studyIndex++;else{studyQueue=[];studyIndex=0}renderStudy()};
+$("studySpeakWord").onclick=()=>{if(studyCurrent())tts(studyCurrent().word)};
+$("studySpeakSentence").onclick=()=>{if(studyCurrent())tts(studyCurrent().sentence)};$("search").oninput=renderList;
 function wordKey(word){return String(word||"").normalize("NFKC").trim().replace(/\s+/g," ").toLocaleLowerCase("en")}
 function findDuplicate(word){return V.words.find(w=>wordKey(w.word)===wordKey(word))}
 function checkDuplicate(){
@@ -135,7 +164,7 @@ async function initialLoad(){
   V.words=saved;V.mode="local";
   note("無法取得最新公開 JSON："+e.message+"。已保留本機 "+saved.length+" 個單字。");
  }
- render();
+ render();startStudy();
 }
 initialLoad();
 })();
