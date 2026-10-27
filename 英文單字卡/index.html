@@ -53,15 +53,32 @@ $("save").onclick=sync;$("local").onclick=()=>{if(V.dirty&&!confirm("是否轉�
 $("export").onclick=()=>{const blob=new Blob([JSON.stringify(V.words,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="vocabulary-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500)};
 $("import").onchange=async e=>{try{const file=e.target.files[0];if(!file)return;const data=JSON.parse(await file.text());if(!Array.isArray(data))throw Error("檔案不是 JSON 陣列");if(!confirm("匯入會覆蓋目前的單字清單，繼續？"))return;V.words=data.map(normalize);V.queue=[];persist()}catch(err){note("匯入失敗："+err.message)}finally{e.target.value=""}};
 async function initialLoad(){
- let saved=[];try{saved=(JSON.parse(localStorage.getItem(KEY)||"[]")).map(normalize)}catch(e){note("本機資料無法讀取："+e.message)}
- if(saved.length){V.words=saved;V.mode="local";note("已載入此瀏覽器既有的 "+saved.length+" 個單字，以免覆蓋尚未同步的資料。若要載入 GitHub 最新資料，請先匯出備份後到同步設定按「從 GitHub 載入」。");render();return}
+ let saved=[];
+ try{saved=(JSON.parse(localStorage.getItem(KEY)||"[]")).map(normalize)}catch(e){note("本機資料無法讀取："+e.message)}
  try{
   const response=await fetch("./vocabulary.json?refresh="+Date.now(),{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();if(!Array.isArray(data))throw Error("資料格式錯誤");
-  V.words=data.map(normalize);V.mode="public";V.dirty=false;
-  note("已自動從公開 JSON 載入 "+V.words.length+" 個單字。閱讀與複習不需 Token；要寫回 GitHub，請展開同步設定並授權。");
- }catch(e){V.words=[];V.mode="local";note("自動讀取 GitHub JSON 失敗："+e.message+"。目前可以先用本機模式，或稍後重新整理。")}
+  const remote=data.map(normalize);
+  if(saved.length){
+   const byWord=new Map(remote.map(w=>[w.word.trim().toLowerCase(),w]));
+   let fixed=0;
+   for(const w of saved){
+    const matching=byWord.get(w.word.trim().toLowerCase());
+    if(matching && !w.partOfSpeech && matching.partOfSpeech){w.partOfSpeech=matching.partOfSpeech;fixed++}
+   }
+   const seen=new Set(saved.map(w=>w.word.trim().toLowerCase()));
+   const newRemote=remote.filter(w=>!seen.has(w.word.trim().toLowerCase()));
+   V.words=[...saved,...newRemote];V.mode="local";V.dirty=true;localSave();
+   note("已保留本機的 "+saved.length+" 個單字與評分，補上 "+fixed+" 個缺少的詞性，並加入 "+newRemote.length+" 個 GitHub 新單字。此版本仍為本機資料；如需跨裝置同步，請先下載備份再操作 GitHub 同步。");
+  }else{
+   V.words=remote;V.mode="public";V.dirty=false;
+   note("已自動從公開 JSON 載入 "+V.words.length+" 個單字（含詞性）。如要寫回 GitHub，請展開同步設定並授權。");
+  }
+ }catch(e){
+  V.words=saved;V.mode="local";
+  note("無法取得最新公開 JSON："+e.message+"。已保留本機 "+saved.length+" 個單字。");
+ }
  render();
 }
 initialLoad();
