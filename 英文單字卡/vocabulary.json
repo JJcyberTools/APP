@@ -8,7 +8,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-002",
@@ -19,7 +20,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-003",
@@ -30,7 +32,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-004",
@@ -41,7 +44,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-005",
@@ -52,7 +56,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-006",
@@ -63,7 +68,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-007",
@@ -74,7 +80,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-008",
@@ -85,7 +92,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-009",
@@ -96,7 +104,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "adj."
   },
   {
     "id": "toeic-day1-010",
@@ -107,7 +116,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-011",
@@ -118,7 +128,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-012",
@@ -129,7 +140,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-013",
@@ -140,7 +152,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-014",
@@ -151,7 +164,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-015",
@@ -162,7 +176,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-016",
@@ -173,7 +188,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-017",
@@ -184,7 +200,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-018",
@@ -195,7 +212,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-019",
@@ -206,7 +224,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-020",
@@ -217,7 +236,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-021",
@@ -228,7 +248,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-022",
@@ -239,7 +260,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n./v."
   },
   {
     "id": "toeic-day1-023",
@@ -250,7 +272,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-024",
@@ -261,7 +284,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-025",
@@ -272,7 +296,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-026",
@@ -283,7 +308,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-027",
@@ -294,7 +320,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-028",
@@ -305,7 +332,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-029",
@@ -316,7 +344,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "adj."
   },
   {
     "id": "toeic-day1-030",
@@ -327,7 +356,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-031",
@@ -338,7 +368,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-032",
@@ -349,7 +380,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-033",
@@ -360,7 +392,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-034",
@@ -371,7 +404,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "n."
   },
   {
     "id": "toeic-day1-035",
@@ -382,7 +416,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "adj."
   },
   {
     "id": "toeic-day1-036",
@@ -393,7 +428,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "adj."
   },
   {
     "id": "toeic-day1-037",
@@ -404,7 +440,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "adj."
   },
   {
     "id": "toeic-day1-038",
@@ -415,7 +452,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-039",
@@ -426,7 +464,8 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   },
   {
     "id": "toeic-day1-040",
@@ -437,6 +476,7 @@
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00"
+    "createdAt": "2026-10-22T00:00:00+08:00",
+    "partOfSpeech": "v."
   }
 ]
