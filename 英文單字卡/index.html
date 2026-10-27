@@ -64,10 +64,11 @@ async function saveRemote(){
  const {url,branch}=endpoint();
  // Read the current GitHub version on every save, rather than using a stale SHA.
  const fresh=await request(url+"?ref="+encodeURIComponent(branch));
- const remote=JSON.parse(b64decode(fresh.content)).map(normalize);
- if(!Array.isArray(remote))throw Error("遠端格式錯誤");
+ const parsedRemote=JSON.parse(b64decode(fresh.content));
+ if(!Array.isArray(parsedRemote))throw Error("遠端格式錯誤");
+ const remote=parsedRemote.map(normalize);
  const combined=mergeVocabulary(remote,V.words,V.base);
- const payload={message:"Update vocabulary cards and review ratings",content:b64encode(JSON.stringify(combined,null,2)+"\\n"),branch,sha:fresh.sha};
+ const payload={message:"Update vocabulary cards and review ratings",content:b64encode(JSON.stringify(combined,null,2)+"\n"),branch,sha:fresh.sha};
  const response=await request(url,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
  V.words=combined;V.base=JSON.parse(JSON.stringify(combined));V.sha=response.content?.sha||null;V.dirty=false;
  localSave();
