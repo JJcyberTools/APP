@@ -2,481 +2,481 @@
   {
     "id": "toeic-day1-001",
     "word": "launch",
+    "partOfSpeech": "v.",
     "meaning": "推出、發表",
     "sentence": "The company will launch a new product next month.",
     "translation": "公司下個月將推出一項新產品。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-002",
     "word": "expand",
+    "partOfSpeech": "v.",
     "meaning": "擴大、拓展",
     "sentence": "We plan to expand our business overseas.",
     "translation": "我們計畫拓展海外業務。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-003",
     "word": "reduce",
+    "partOfSpeech": "v.",
     "meaning": "減少、降低",
     "sentence": "The new system will reduce operating costs.",
     "translation": "新系統將降低營運成本。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-004",
     "word": "revenue",
+    "partOfSpeech": "n.",
     "meaning": "營收",
     "sentence": "The company's revenue increased this quarter.",
     "translation": "這家公司本季的營收增加了。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-005",
     "word": "profit",
+    "partOfSpeech": "n.",
     "meaning": "利潤",
     "sentence": "The company reported a higher profit this year.",
     "translation": "這家公司今年公布了更高的利潤。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-006",
     "word": "expense",
+    "partOfSpeech": "n.",
     "meaning": "費用、支出",
     "sentence": "Please keep receipts for all travel expenses.",
     "translation": "請保留所有差旅費用的收據。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-007",
     "word": "demand",
+    "partOfSpeech": "n.",
     "meaning": "需求",
     "sentence": "Demand for online services continues to grow.",
     "translation": "線上服務的需求持續成長。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-008",
     "word": "capacity",
+    "partOfSpeech": "n.",
     "meaning": "容量、產能",
     "sentence": "The factory increased its production capacity.",
     "translation": "工廠提高了生產能力。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-009",
     "word": "competitive",
+    "partOfSpeech": "adj.",
     "meaning": "有競爭力的",
     "sentence": "We offer a competitive salary and benefits.",
     "translation": "我們提供有競爭力的薪資與福利。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "adj."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-010",
     "word": "investment",
+    "partOfSpeech": "n.",
     "meaning": "投資",
     "sentence": "The company made a significant investment in technology.",
     "translation": "公司對科技進行了重大投資。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-011",
     "word": "submit",
+    "partOfSpeech": "v.",
     "meaning": "提交",
     "sentence": "Please submit your report by Friday.",
     "translation": "請在星期五前提交報告。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-012",
     "word": "approve",
+    "partOfSpeech": "v.",
     "meaning": "核准",
     "sentence": "The manager must approve the request.",
     "translation": "經理必須核准這項申請。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-013",
     "word": "require",
+    "partOfSpeech": "v.",
     "meaning": "要求",
     "sentence": "This position requires excellent communication skills.",
     "translation": "這個職位要求優秀的溝通能力。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-014",
     "word": "confirm",
+    "partOfSpeech": "v.",
     "meaning": "確認",
     "sentence": "Please confirm your reservation by email.",
     "translation": "請透過電子郵件確認你的預訂。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-015",
     "word": "arrange",
+    "partOfSpeech": "v.",
     "meaning": "安排",
     "sentence": "We will arrange a meeting for next week.",
     "translation": "我們將安排下週的會議。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-016",
     "word": "postpone",
+    "partOfSpeech": "v.",
     "meaning": "延期",
     "sentence": "They decided to postpone the conference.",
     "translation": "他們決定延後研討會。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-017",
     "word": "implement",
+    "partOfSpeech": "v.",
     "meaning": "實施",
     "sentence": "The team will implement the new policy in November.",
     "translation": "團隊將在十一月實施新政策。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-018",
     "word": "maintain",
+    "partOfSpeech": "v.",
     "meaning": "維持、保養",
     "sentence": "Regular inspections help maintain the equipment.",
     "translation": "定期檢查有助於保養設備。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-019",
     "word": "supervisor",
+    "partOfSpeech": "n.",
     "meaning": "主管",
     "sentence": "Please ask your supervisor for approval.",
     "translation": "請向你的主管申請核准。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-020",
     "word": "department",
+    "partOfSpeech": "n.",
     "meaning": "部門",
     "sentence": "She works in the marketing department.",
     "translation": "她在行銷部門工作。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-021",
     "word": "agenda",
+    "partOfSpeech": "n.",
     "meaning": "議程",
     "sentence": "The agenda will be emailed before the meeting.",
     "translation": "議程會在會議前透過電子郵件寄出。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-022",
     "word": "schedule",
+    "partOfSpeech": "n./v.",
     "meaning": "時程、安排",
     "sentence": "We need to adjust the project schedule.",
     "translation": "我們需要調整專案時程。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n./v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-023",
     "word": "deadline",
+    "partOfSpeech": "n.",
     "meaning": "截止期限",
     "sentence": "The deadline for applications is Friday.",
     "translation": "申請截止日期是星期五。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-024",
     "word": "proposal",
+    "partOfSpeech": "n.",
     "meaning": "提案",
     "sentence": "The committee reviewed our proposal.",
     "translation": "委員會審查了我們的提案。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-025",
     "word": "participant",
+    "partOfSpeech": "n.",
     "meaning": "參與者",
     "sentence": "Every participant will receive a certificate.",
     "translation": "每位參與者都會收到證書。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-026",
     "word": "presentation",
+    "partOfSpeech": "n.",
     "meaning": "簡報、發表",
     "sentence": "He prepared a presentation for the clients.",
     "translation": "他為客戶準備了一份簡報。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-027",
     "word": "negotiate",
+    "partOfSpeech": "v.",
     "meaning": "協商、談判",
     "sentence": "The two companies will negotiate the contract terms.",
     "translation": "兩家公司將協商合約條款。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-028",
     "word": "accomplish",
+    "partOfSpeech": "v.",
     "meaning": "完成、達成",
     "sentence": "We can accomplish our goals through teamwork.",
     "translation": "透過團隊合作，我們可以達成目標。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-029",
     "word": "efficient",
+    "partOfSpeech": "adj.",
     "meaning": "有效率的",
     "sentence": "This machine is more efficient than the old one.",
     "translation": "這台機器比舊機器更有效率。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "adj."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-030",
     "word": "evaluate",
+    "partOfSpeech": "v.",
     "meaning": "評估",
     "sentence": "The manager will evaluate employee performance.",
     "translation": "經理將評估員工的工作表現。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-031",
     "word": "reimbursement",
+    "partOfSpeech": "n.",
     "meaning": "費用報銷",
     "sentence": "Employees can request reimbursement for travel costs.",
     "translation": "員工可以申請差旅費報銷。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-032",
     "word": "regulation",
+    "partOfSpeech": "n.",
     "meaning": "規定、法規",
     "sentence": "All staff must follow safety regulations.",
     "translation": "所有員工都必須遵守安全規定。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-033",
     "word": "comply",
+    "partOfSpeech": "v.",
     "meaning": "遵守",
     "sentence": "Suppliers must comply with the new regulations.",
     "translation": "供應商必須遵守新法規。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-034",
     "word": "insight",
+    "partOfSpeech": "n.",
     "meaning": "深入見解",
     "sentence": "The survey provided insight into customer preferences.",
     "translation": "這項調查讓我們深入了解顧客偏好。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "n."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-035",
     "word": "unanimous",
+    "partOfSpeech": "adj.",
     "meaning": "一致同意的",
     "sentence": "The board reached a unanimous decision.",
     "translation": "董事會達成了一致的決定。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "adj."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-036",
     "word": "integral",
+    "partOfSpeech": "adj.",
     "meaning": "不可或缺的",
     "sentence": "Training is integral to employee development.",
     "translation": "訓練是員工發展不可或缺的一環。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "adj."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-037",
     "word": "substantial",
+    "partOfSpeech": "adj.",
     "meaning": "大量的、重大的",
     "sentence": "The renovation required a substantial investment.",
     "translation": "這次翻修需要一筆可觀的投資。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "adj."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-038",
     "word": "anticipate",
+    "partOfSpeech": "v.",
     "meaning": "預期",
     "sentence": "We anticipate an increase in orders next month.",
     "translation": "我們預期下個月訂單會增加。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-039",
     "word": "fluctuate",
+    "partOfSpeech": "v.",
     "meaning": "波動",
     "sentence": "Fuel prices often fluctuate during the year.",
     "translation": "燃料價格在一年當中經常波動。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   },
   {
     "id": "toeic-day1-040",
     "word": "allocate",
+    "partOfSpeech": "v.",
     "meaning": "分配（資源）",
     "sentence": "The manager will allocate resources to the project.",
     "translation": "經理將為專案分配資源。",
     "rating": 4,
     "reviewCount": 0,
     "lastReviewed": null,
-    "createdAt": "2026-10-22T00:00:00+08:00",
-    "partOfSpeech": "v."
+    "createdAt": "2026-10-22T00:00:00+08:00"
   }
 ]
