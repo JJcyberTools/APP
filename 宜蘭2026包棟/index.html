@@ -13,6 +13,23 @@
 .map-toolbar button:hover:not(:disabled){background:#d3e3d3}.map-toolbar button:disabled{opacity:.45;cursor:default}
 .map-toolbar #zoom-reset{font-size:.79rem;padding:0 8px}
 .gallery .photo img{object-fit:contain}
+
+.gallery .photo-open{width:100%;padding:0;border:0;border-radius:9px;background:#e8eee4;cursor:zoom-in}
+.gallery .photo-open:disabled{visibility:visible;cursor:default}
+.gallery .photo-open img{min-width:0;min-height:0}
+.photo-dialog{width:min(96vw,1280px);max-width:none;max-height:96dvh;padding:0;border:0;border-radius:14px;background:#172522;color:#fffdf7}
+.photo-dialog::backdrop{background:#101916db}
+body:has(.photo-dialog[open]){overflow:hidden}
+.photo-viewer{display:grid;gap:10px;padding:12px}
+.photo-viewer-header,.photo-viewer-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.photo-viewer-header h2{margin:0;font-size:1rem}
+.photo-viewer button{border:1px solid #a9bcb1;border-radius:8px;background:#29423b;color:white;min-height:44px;min-width:44px;padding:0 12px}
+.photo-viewer button:hover{background:#3c5a50}
+.photo-viewer-stage{height:min(72dvh,850px);display:grid;place-items:center}
+.photo-viewer-stage img{width:100%;height:100%;min-width:0;min-height:0;object-fit:contain}
+.photo-viewer-stage p{margin:0;text-align:center}
+.photo-viewer-nav span{font-size:.9rem;text-align:center;overflow-wrap:anywhere}
+.photo-viewer button:disabled{visibility:hidden}
 </style>
 </head>
 <body>
@@ -665,35 +682,100 @@ function renderSummary() {
 }
 function createGallery(photos, credit = '官網照片') {
   const gallery = node('figure','gallery');
-  const photo = node('div','photo');
+  const photo = node('button','photo photo-open');
+  photo.type = 'button';
+  photo.setAttribute('aria-haspopup','dialog');
+  photo.setAttribute('aria-label','放大照片');
   const image = node('img');
   const fallback = node('span','','照片暫時無法載入，請開啟住宿網址。');
-  fallback.hidden = true;
   const caption = node('figcaption');
-  const previous = node('button','','‹');
-  const next = node('button','','›');
   const position = node('span');
   position.setAttribute('aria-live','polite');
-  previous.type = next.type = 'button';
-  previous.setAttribute('aria-label','上一張照片');
-  next.setAttribute('aria-label','下一張照片');
-  previous.disabled = next.disabled = photos.length < 2;
+
+  const dialog = node('dialog','photo-dialog');
+  const viewer = node('div','photo-viewer');
+  const header = node('div','photo-viewer-header');
+  const title = node('h2','','大圖預覽');
+  title.id = 'photo-viewer-title';
+  dialog.setAttribute('aria-labelledby',title.id);
+  const close = node('button','','關閉');
+  close.type = 'button';
+  close.autofocus = true;
+  close.addEventListener('click', () => dialog.close());
+  header.append(title,close);
+  const stage = node('div','photo-viewer-stage');
+  const largeImage = node('img');
+  const largeFallback = node('p','','照片暫時無法載入，請開啟住宿網址。');
+  const navigation = node('div','photo-viewer-nav');
+  const largePosition = node('span');
+  largePosition.setAttribute('aria-live','polite');
+
   let index = 0;
-  const show = () => {
+  function showImage(target, message) {
     const [url,alt] = photos[index];
-    fallback.hidden = true;
-    image.hidden = false;
-    image.alt = alt;
-    image.src = url;
+    target.hidden = false;
+    message.hidden = true;
+    target.alt = alt;
+    target.src = url;
+  }
+
+  function showLarge() {
+    showImage(largeImage,largeFallback);
+    largePosition.textContent = (index + 1) + ' / ' + photos.length + ' · ' + photos[index][1];
+  }
+
+  function show() {
+    photo.disabled = false;
+    showImage(image,fallback);
     position.textContent = (index + 1) + ' / ' + photos.length + ' · ' + credit;
-  };
-  image.referrerPolicy = 'no-referrer';
-  image.addEventListener('error', () => {image.hidden = true; fallback.hidden = false;});
-  previous.addEventListener('click', () => {index = (index - 1 + photos.length) % photos.length; show();});
-  next.addEventListener('click', () => {index = (index + 1) % photos.length; show();});
+    if (dialog.open) showLarge();
+  }
+
+  function step(offset) {
+    index = (index + offset + photos.length) % photos.length;
+    show();
+  }
+
+  function arrow(offset) {
+    const label = offset < 0 ? '上一張照片' : '下一張照片';
+    const button = node('button','',offset < 0 ? '‹' : '›');
+    button.type = 'button';
+    button.setAttribute('aria-label',label);
+    button.disabled = photos.length < 2;
+    button.addEventListener('click', () => step(offset));
+    return button;
+  }
+
+  image.referrerPolicy = largeImage.referrerPolicy = 'no-referrer';
+  image.addEventListener('error', () => {
+    image.hidden = true;
+    fallback.hidden = false;
+    photo.disabled = true;
+  });
+  largeImage.addEventListener('error', () => {
+    largeImage.hidden = true;
+    largeFallback.hidden = false;
+  });
+  photo.addEventListener('click', () => {
+    showLarge();
+    dialog.showModal();
+  });
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      step(event.key === 'ArrowLeft' ? -1 : 1);
+    }
+  });
   photo.append(image,fallback);
-  caption.append(previous,position,next);
-  gallery.append(photo,caption);
+  caption.append(arrow(-1),position,arrow(1));
+  stage.append(largeImage,largeFallback);
+  navigation.append(arrow(-1),largePosition,arrow(1));
+  viewer.append(header,stage,navigation);
+  dialog.append(viewer);
+  gallery.append(photo,caption,dialog);
   show();
   return gallery;
 }
